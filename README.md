@@ -433,3 +433,32 @@ select 된 결과물 배열 형태로 반환한다.
 	$obj->orderby('created_at', 'DESC')->
 	page($current_page, 20)->
 	get()->card();
+	
+#####페이징 HTML 노출
+
+	$obj-paging->attribute();
+
+	/*
+	아래 값들을 통해 template 에서 사용할 수 있다.
+	output : stdclass {
+		total_cnt, /**전체 row 수 **/
+		per_page, /**페이지당 노출  row 수 **/
+		now_page, /**현재 페이지 **/
+		total_page, /** 총 페이지 **/
+		start_page, /** 화면에 노출될 페이지 중 첫페이지 **/
+		end_page, /** 화면에 노출될 페이지 중 마지막 페이지 **/
+		pre_group, /** 이전 그룹으로 갈때 이동 될 페이지 **/
+		next_group, /** 다음 그룹으로 갈때 이동 될 페이지 **/
+		start_limit, /** 화면에 노출되는 row 중 첫 row **/
+		limit_query /** 쿼리에 limit 구절에 들어갈 구문 **/
+	}
+	*/
+
+	/*노출 되어야 할부분에 해당 코드 삽입*/
+	<?php 
+	* @param string $parameter 페이지이동할때 전달되어야할 파라미터 문자열
+	* @param string $page_parameter_name 페이징 될때 페이지 파라미터 이름
+	* @param array $data 템플릿에 넘겨줘야할 변수명을 키로하여 배열로 받는다
+	* @param string $paging_template html 템플릿 파일
+	$obj->paging->getDisplayPaging($_SERVER['QUERY_STRING'], 'page');
+	?>
