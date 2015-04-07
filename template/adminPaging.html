@@ -1,0 +1,38 @@
+<?php
+if($this->attribute->start_page == 1) { 
+	$prev_class = ' disabled';
+};
+
+if(ceil($this->attribute->total_page - $this->attribute->end_page < 1)){
+	$next_class = ' disabled';
+}?>
+
+
+<div class="col-xs-6">
+	<div class="dataTables_paginate paging_bootstrap">
+		<ul class="pagination">
+			<li class="prev<?php echo $prev_class?>">
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $this->attribute->pre_group?>">
+					← Previous
+				</a>
+			</li>
+			<?
+			for($i = $this->attribute->start_page ; $i <= $this->attribute->end_page ; $i++){
+				if ($this->attribute->now_page == $i){?>
+					<li class="active">
+						<a href="#"><?php echo $i?></a>
+					</li>
+				<?php
+				} else {?>
+					<li><a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $i?>"><?php echo $i?></a></li>
+				<?php
+				};
+			};?>
+			<li class="next<?php echo $next_class?>">
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $this->attribute->next_group?>">
+				Next → 
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

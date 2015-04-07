@@ -1,0 +1,42 @@
+<div class="pagination pagination-centered">
+	<ul>
+		<?php
+		if($this->attribute->start_page != 1){ ?>
+			<li>
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=1">
+					<img src="//img.tourtips.com/images/common/list_prev.gif" alt="처음" />
+				</a>
+			</li>
+			<li>
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $this->attribute->pre_group?>">
+					<img src="//img.tourtips.com/images/common/page_prev.gif" alt="이전" />
+				</a>
+			</li>
+		<?php
+		}
+
+		for($i = $this->attribute->start_page ; $i <= $this->attribute->end_page ; $i++){
+			if ($this->attribute->now_page == $i){?>
+				<li class="active"><p><?php echo $i?></p></li>
+			<?php
+			} else {?>
+				<li><a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $i?>"><?php echo $i?></a></li>
+			<?php
+			}
+		}
+		if(ceil($this->attribute->total_page - $this->attribute->end_page > 0)){?>
+			
+			<li>
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $this->attribute->next_group?>">
+					<img src="//img.tourtips.com/images/common/page_next.gif" alt="다음" />
+				</a>
+			</li>
+			<li>
+				<a href="?<?php echo $parameter?>&<?php echo $page_parameter_name?>=<?php echo $this->attribute->total_page?>">
+					<img src="//img.tourtips.com/images/common/list_next.gif" alt="마지막" />
+				</a>
+			</li>
+		<?php
+		}?>
+	</ul>
+</div>
