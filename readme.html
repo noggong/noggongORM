@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>noggongORM</h1>
+<p>php version 5.2 ORM </p>
+<p>php 5.2에 맞는 ORM 을 마땅히 찾을수 없어 만들었음.</p>
+<p><code>Ilunimate</code> 와 비슷한 구조로 만들려고 노력 했음 </p>
+<p><a href="https://github.com/woojunho/noggongORM">github</a> 에서 다운로 한다.</p>
+<h2>How to use</h2>
+<p>PDO 가 아닌 Mysql API 기반. </p>
+<h3>Database Object 생성</h3>
+<pre><code>&lt;?php
+require_once 'Model.php'; /*원하는 디렉토리 에 압축을 풀고 Model.php 를 경로에 맞게 `require` 한다.*/
+
+/**
+* Object model
+* class Object
+*/
+class Object extends Model{
+
+    protected $table = '[테이블 이름]'; 
+
+    protected $database = '[데이터 베이스 이름]';
+
+
+}
+</code></pre>
+
+<h3>Object 인스턴스 생성</h3>
+<p>$db_conn : optional</p>
+<pre><code>&lt;?php
+$object = new Object($db_conn = '[DB connection]');
+</code></pre>
+
+<h2>Method</h2>
+<p><strong>Query Builder</strong> 라고 명시되어 있는 메소드는 select 를 하기전 쿼리를 셋팅하는 메소드로 <code>Model</code> 을 반환하며 순서에 상관없이 체인하여 사용할수 있다 </p>
+<h4>conn()</h4>
+<p>여러 모델 object 사용시 connection 자원을 아끼기 위해 connection 을 받아와 인스턴시 생성시 넘겨준다.</p>
+<p>@return -  db connection  </p>
+<pre><code>&lt;?php
+$new_object = new NewObject($object-&gt;conn());
+</code></pre>
+
+<h4>where($field, $value, $seperate = '=') <strong>Query Builder</strong></h4>
+<p>and where 절 추가</p>
+<p>@param string $field 필드명</p>
+<p>@param string $value 값</p>
+<p>@param string $seperate 연산자</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+$obj-&gt;where('id', 1)-&gt;where('created_at', now(), '&gt;');
+</code></pre>
+
+<h4>orWhere($field, $value, $seperate = '=') <strong>Query Builder</strong></h4>
+<p>-or where 절 추가</p>
+<p>@param string $field 필드명</p>
+<p>@param string $value 값</p>
+<p>@param string $seperate 연산자</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+$obj-&gt;where('user_name', 'noggong')-&gt;orWhere('created_at', now(), '&gt;');
+</code></pre>
+
+<h4>orderby($field, $ascend = 'ASC') <strong>Query Builder</strong></h4>
+<p>정렬 선택</p>
+<p>@param string $field 필드이름</p>
+<p>@param string $ascend 차순 정의</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+$obj-&gt;orderby('created', 'desc');
+</code></pre>
+
+<h4>groupby($array) <strong>Query Builder</strong></h4>
+<p>groupby 절</p>
+<p>@param array $array 필드이름</p>
+<p>@return Model</p>
+<pre><code>$obj-&gt;orderby('created', 'desc')-&gt;groupby(array('fromurl', 'created_at'));
+</code></pre>
+
+<h4>rawWhere($string) <strong>Query Builder</strong></h4>
+<p>스트링 그대로 <code>where</code> 절추가 , 정형화된 계산식 이외 사용할 때 사용 </p>
+<p>@param string $field 필드명</p>
+<p>@param string $value 값</p>
+<p>@param string $seperate 연산자</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+$obj-&gt;rawWhere('seq is not null');
+</code></pre>
+
+<h4>page($current<em>page = 1, $perpage = 30, $range = 10, $statics</em>field = false) <strong>Query Builder</strong></h4>
+<p>페이징 기능</p>
+<p>@param int $current_page 현재 페이지</p>
+<p>@param int $perpage 페이지당 노출될 row 수</p>
+<p>@param int $range 하단에 페이징에 노출되는 페이징 단위</p>
+<p>@param int $statics_field 페이징시 추가로 가져와야 하는 Db 정보</p>
+<p>@return Model</p>
+<pre><code>&lt;?
+$obj-&gt;page(2, 6); /*2페이지의 6개의 게시물 가져옴*/ 
+</code></pre>
+
+<h4>page<em>info($current</em>page = 1, $perpage = 30, $range = 10, $statics_field = false)</h4>
+<p><strong>select query 실행없이 page 정보</strong>만 가져온다.</p>
+<p>@param int $current_page 현재 페이지</p>
+<p>@param int $perpage 페이지당 노출될 row 수</p>
+<p>@param int $range 하단에 페이징에 노출되는 페이징 단위</p>
+<p>@param int $statics_field 페이징시 추가로 가져와야 하는 Db 정보</p>
+<p>@return PagingModel</p>
+<pre><code>&lt;?php
+$obj-&gt;where('seq', '1')-&gt;page_info(1, 10); /* seq 가 1인 게시물을 가져온다고 했을때 첫 페이지의 10개의 게시물 가져오는 페이징 정보*/
+</code></pre>
+
+<h4>count($field = null)</h4>
+<p>row count 가져오기</p>
+<p>@param string $field count  할 필드</p>
+<p>@return int</p>
+<pre><code>&lt;?php
+$obj-&gt;where('seq', '1')-&gt;page_info(1, 10); /* seq 가 1인 게시물의 갯수를 가져온다*/
+</code></pre>
+
+<h4>insert($array)</h4>
+<p>insert 한다</p>
+<p>@param array $array</p>
+<p>@return resource|false</p>
+<pre><code>&lt;?php
+$obj-&gt;insert(
+        array(
+            'user_name' =&gt; $user_name, 
+            'title' =&gt; $title,
+        )   
+    );
+</code></pre>
+
+<h4>update($array)</h4>
+<p>update 한다, <code>where</code>절이 미리 셋팅 되어있지 않다면 실행되지 않는다. <code>return</code> 으로 update 된 열의 <strong>첫번째 열의 값</strong>을 <strong>model 객체</strong>로 <code>return</code>한다 </p>
+<p>@param array $array</p>
+<p>@return Object</p>
+<pre><code>&lt;?php
+/* seq 가 1 인 값의 title을 변경한다 */
+$obj-&gt;
+    where('seq', 1)-&gt;
+    update(array('title' =&gt; $title));
+</code></pre>
+
+<h4>first()</h4>
+<p>@return Model
+첫번째 결과값만 가져온다</p>
+<pre><code>&lt;?php
+/** seq 가 10 인 값중 첫번째 값을 반환한다 **/
+$obj-&gt;where('seq', 10)-&gt;first();
+</code></pre>
+
+<h4>find($pk_value)</h4>
+<p>Pk 에 의한 select 를한다.</p>
+<p>@param int|mixed $pk_value </p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+/* obj 모델에서 pk 값이 4인 row를 반환한다 */
+$obj-&gt;find(4);
+</code></pre>
+
+<h4>limit($x, $y = null) <strong>Query Builder</strong></h4>
+<p>limit 절 설정</p>
+<p>@param int $x limit x,y 에서 x</p>
+<p>@param int $y limit x,y 에서 y</p>
+<p>@return Model</p>
+<pre><code>/** row중 4번째 row 부터 5개의 게시물을 가져온다*/
+$obj-&gt;limit(4,5)'
+
+/** row중 첫번째 row 부터  5개의 게시물을 가져온다*/
+$obj-&gt;limit(5)'
+</code></pre>
+
+<h4>select($field_list) <strong>Query Builder</strong></h4>
+<p>select 될 필드 설정, query builder 에서 해당 메소드가 생략될경우 <strong>애스트릭(*)</strong> 으로 된다. </p>
+<p>@param array|string $field_list 필드 목록</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+/** seq 필드를 select 필드 로 설정한다**/
+$obj-&gt;select('seq');
+
+/** seq, title 필드를 select 필드 로 설정한다**/
+$obj-&gt;select(array('seq', 'title'));
+</code></pre>
+
+<h4>get()</h4>
+<p>query builder 로 생성된 query 를 select 한다.</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+$obj-&gt;get();    
+</code></pre>
+
+<h4>attribute($key = null)</h4>
+<p>attribute 반환, <code>get()</code> 에 의해 <code>select</code> 되면 attribute 프로퍼티에 결과값이 저장되는데 해당 값을 가져온다. </p>
+<p>@param string|mixed key atrribute key -&gt; 비어있으면 전제 attribute 값을 가져온다.</p>
+<p>@return array|stdClass</p>
+<pre><code>&lt;?php
+$result = $obj-&gt;select('seq')-&gt;get()-&gt;attribute();
+echo $result[0]-&gt;seq; 
+</code></pre>
+
+<h4>table($table) <strong>Query Builder</strong></h4>
+<p>커스텀 테이블 셋팅, 모델의 table 이외 다른 테이블을 사용해야 할경우 쓴다. (서브쿼리를 이용할때 주로 사용)</p>
+<p>@param string $table</p>
+<p>@return Model</p>
+<pre><code>&lt;?php
+/* select * from another_table 결과값에서 select 한다 */
+$obj-&gt;table('select * from another_table')-&gt;get();
+</code></pre>
+
+<h4>history()</h4>
+<p>모든 쿼리는 profileing 되고 히스토리에 남는다. 쌓여있는 쿼리 히스토리 를 반환한다.</p>
+<p>@return array </p>
+<pre><code>&lt;?php
+$obj-&gt;history();
+</code></pre>
+
+<h4>getLastQuery()</h4>
+<p>history 중 마지막 쿼리 실행 결과 반환</p>
+<p>@return array </p>
+<pre><code>&lt;?php
+$obj-&gt;getLastQuery();
+</code></pre>
+
+<h4>toSql()</h4>
+<p>query builder 로 만들어진 쿼리를 실행전 문자열로 가져온다.</p>
+<p>@return string </p>
+<pre><code>&lt;?php
+
+echo $obj-&gt;select(array('seq', 'user'))-&gt;where('seq', '1')-&gt;toSql();
+
+/** output : 'select seq, user from table where seq=1' **/
+</code></pre>
+
+<h4>toArray($array = null)</h4>
+<p>select 된 결과물 배열 형태로 반환한다. </p>
+<p>@param array $array 특정 값들을 변경해서 저장 ,해당 값은 $val 로 표</p>
+<p>@return array </p>
+<pre><code>&lt;?php
+/** 결과 값중 create_at 은 substr 함수를 실행하여 치환 한 값을 배열로 반환한다 **/
+$obj-&gt;get()-&gt;toArray(
+    array(
+        'created_at' =&gt; 'substr($val, 0, 10)',
+));
+</code></pre>
+
+<h4>hasMany($relationModel, $primary<em>key = '', $foreign</em>key = '')</h4>
+<p>1: m 관계일때 for문 돌리면서 가져오기</p>
+<p>@param string $relationModel 관계에 있는 모델이름</p>
+<p>@param string $primary_key 연결되어있는 키 </p>
+<p>@param string $foreign_key 연결되어있는 모델의 fk</p>
+<p>@return Model</p>
+<h5>Object.php</h5>
+<pre><code>&lt;?php
+
+/**
+* Object model
+* class Object
+*/
+
+class Object extends Model{
+
+    protected $table = '[테이블 이름]'; 
+
+    protected $database = '[데이터 베이스 이름]';
+
+    public function fkObject() 
+    {
+        return $this-&gt;hasMany('fkObjeModel
+    }
+</code></pre>
+
+<h5>controller.php</h5>
+<pre><code>/** object 의 row를 select 한후 fk로 걸려있는 fkObject 모델에 row를 select 하여 relationship 프로퍼티에 저장한다.**/
+$obj = new Object();
+$obj-&gt;get()-&gt;fkObject;
+</code></pre>
+
+<h4>protected function hasOne($relationModel, $foreign<em>key = '', $primary</em>key = '')</h4>
+<p>1: 1 관계일때 for문 돌리면서 가져오기</p>
+<p>@param string $relationModel 관계에 있는 모델이름</p>
+<p>@param string $foreign_key 연결되어있는 모델의 fk</p>
+<p>@param string $primary_key 연결되어있는 키 </p>
+<p>@return Model</p>
+<h5>Object.php</h5>
+<pre><code>&lt;?php
+
+/**
+* Object model
+* class fkObject
+*/
+
+class fkObject extends Model{
+
+    protected $table = '[테이블 이름]'; 
+
+    protected $database = '[데이터 베이스 이름]';
+
+    public function Object() 
+    {
+        return $this-&gt;hasOne('ObjeModel
+    }
+</code></pre>
+
+<h5>controller.php</h5>
+<pre><code>/** fkobject 의 row를 select 한후 자신의 fk 로 걸려있는 Object 모델에 row pk 와 연결하여 relationship 프로퍼티에 저장한다.**/
+$obj = new fkObject();
+$obj-&gt;get()-&gt;Object;
+</code></pre>
+
+<h2>For example</h2>
+<pre><code>$obj = new Object();
+
+/* user가 noggong 이고 2014 이후에 작성된 row를 seq만 가져오되 페이징 하여 첫페이지를 가져온다*/
+$get = $obj-&gt;select('seq')-&gt;where('user', 'noggong')-&gt;where('created_at' , '2014', '&gt;')-&gt;paging(1,10)-&gt;get();
+
+/**위에서 가져온 값들을 array 형태로 반환한다 **/
+$get-&gt;toArray();
+
+/** 부모 글(parent_seq)이 4 인 댓글의 갯수를 가져온다 **/
+$obj-&gt;where('parent_seq', 4)-&gt;count();
+
+
+/**
+* created_at 을 기준으로 DESC 형태로 가져오되 $current_page 를 가져오고 해당 댓글의 원본 글을 가져온다
+* card() 는 model 에 미리 hasOne으로 선언되어있어야 한다. 위의 hasOne 메소드를 참고
+**/
+$obj-&gt;orderby('created_at', 'DESC')-&gt;
+page($current_page, 20)-&gt;
+get()-&gt;card();
+</code></pre>
+
+<h5>페이징 HTML 노출</h5>
+<pre><code>$obj-paging-&gt;attribute();
+
+/*
+아래 값들을 통해 template 에서 사용할 수 있다.
+output : stdclass {
+    total_cnt, /**전체 row 수 **/
+    per_page, /**페이지당 노출  row 수 **/
+    now_page, /**현재 페이지 **/
+    total_page, /** 총 페이지 **/
+    start_page, /** 화면에 노출될 페이지 중 첫페이지 **/
+    end_page, /** 화면에 노출될 페이지 중 마지막 페이지 **/
+    pre_group, /** 이전 그룹으로 갈때 이동 될 페이지 **/
+    next_group, /** 다음 그룹으로 갈때 이동 될 페이지 **/
+    start_limit, /** 화면에 노출되는 row 중 첫 row **/
+    limit_query /** 쿼리에 limit 구절에 들어갈 구문 **/
+}
+*/
+
+/*노출 되어야 할부분에 해당 코드 삽입*/
+&lt;?php 
+* @param string $parameter 페이지이동할때 전달되어야할 파라미터 문자열
+* @param string $page_parameter_name 페이징 될때 페이지 파라미터 이름
+* @param array $data 템플릿에 넘겨줘야할 변수명을 키로하여 배열로 받는다
+* @param string $paging_template html 템플릿 파일
+$obj-&gt;paging-&gt;getDisplayPaging($_SERVER['QUERY_STRING'], 'page');
+?&gt;
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
