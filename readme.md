@@ -40,7 +40,9 @@ $db_conn : optional
 
 **Query Builder** 라고 명시되어 있는 메소드는 select 를 하기전 쿼리를 셋팅하는 메소드로 `Model` 을 반환하며 순서에 상관없이 체인하여 사용할수 있다 
 ####conn()
-여러 모델 object 사용시 connection 자원을 아끼기 위해 connection 을 받아와 인스턴시 생성시 넘겨준다.
+기존 커넥션을 동일하게 사용해야 할 경우 넘겨줌
+todo : newlink 를 통한 데이터 베이스 연결 추가 예정
+
 
  @return -  db connection  
 
