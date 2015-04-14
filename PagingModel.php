@@ -194,7 +194,7 @@ class PagingModel {
 		};
 
 		##이전영역 가기
-		$this->attribute->pre_group = $this->attribute->start_page;
+		$this->attribute->pre_group = (ceil(($this->attribute->start_page - $this->range_page) / $this->range_page) - 1) * $this->range_page + 1;
 		##다음영역가기'
 		$this->attribute->next_group = ($this->attribute->end_page + 1);
 
